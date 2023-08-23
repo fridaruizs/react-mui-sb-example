@@ -11,9 +11,9 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'source.unsplash.com',
+        hostname: 'cdn2.thecatapi.com',
         port: '',
-        pathname: '/random',
+        pathname: '/images/**'
       },
     ],
   },
