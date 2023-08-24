@@ -35,7 +35,7 @@ export default function AboutPage() {
   return (
     <Container>
       <Grid container>
-        <Grid item xs={12} md={6}>
+        <Grid item sm={12} md={6}>
           <Box style={styles.header}>
             <Avatar
               alt="Frida"
@@ -56,7 +56,7 @@ export default function AboutPage() {
             </Typography>
 
             <Grid container rowGap={2}>
-              <Grid item xs={12}>
+              <Grid item sm={12}>
                 You can read my cv{' '}
                 <Link
                   href="static/pdfs/mycv.pdf"
@@ -76,7 +76,7 @@ export default function AboutPage() {
                   here
                 </Link>
               </Grid>
-              <Grid item xs={12}>
+              <Grid item sm={12}>
                 You can listen to my favorite song at the moment{' '}
                 <Link
                   href="https://youtu.be/q3lX2p_Uy9I"
@@ -87,7 +87,7 @@ export default function AboutPage() {
                   here
                 </Link>
               </Grid>
-              <Grid item xs={12}>
+              <Grid item sm={12}>
                 And you can check out my certificates on design, securirty and
                 spoken languages on my LinkedIn{' '}
                 <Link
@@ -99,7 +99,7 @@ export default function AboutPage() {
                   here!
                 </Link>
               </Grid>
-              <Grid item xs={12}>
+              <Grid item sm={12}>
                 Last but not least, you can find the repo for this project{' '}
                 <Link
                   href="https://github.com/fridaruizs/react-mui-sb-example/tree/main/material-ui-nextjs-ts"
@@ -110,7 +110,7 @@ export default function AboutPage() {
                   here
                 </Link>
               </Grid>
-              <Grid item xs={12}>
+              <Grid item sm={12}>
                 <Typography variant="h6" sx={styles.title}>
                   Thank you for your time and consideration :)
                 </Typography>
@@ -118,7 +118,7 @@ export default function AboutPage() {
             </Grid>
           </Box>
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item sm={12} md={6}>
           <Lottie
             loop
             animationData={animationData}

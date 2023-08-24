@@ -1328,6 +1328,16 @@
   "resolved" "https://registry.npmjs.org/@floating-ui/utils/-/utils-0.1.1.tgz"
   "version" "0.1.1"
 
+"@fontsource/material-icons@^5.0.7":
+  "integrity" "sha512-QNEk24i1KhV1MoZqpLHfD+T90N2U8lzYxyeHbr6qAWTJG7KgOMib4TA+RonS9vtBT4sw59L9e9Wd1vebXxOhOQ=="
+  "resolved" "https://registry.npmjs.org/@fontsource/material-icons/-/material-icons-5.0.7.tgz"
+  "version" "5.0.7"
+
+"@fontsource/roboto@^5.0.8":
+  "integrity" "sha512-XxPltXs5R31D6UZeLIV1td3wTXU3jzd3f2DLsXI8tytMGBkIsGcc9sIyiupRtA8y73HAhuSCeweOoBqf6DbWCA=="
+  "resolved" "https://registry.npmjs.org/@fontsource/roboto/-/roboto-5.0.8.tgz"
+  "version" "5.0.8"
+
 "@humanwhocodes/config-array@^0.11.10":
   "integrity" "sha512-KVVjQmNUepDVGXNuoRRdmmEjruj0KfiGSbS8LVc12LMsWDQzRXJ0qdhN8L8uUigKpfEHRhlaQFY0ib1tnUbNeQ=="
   "resolved" "https://registry.npmjs.org/@humanwhocodes/config-array/-/config-array-0.11.10.tgz"

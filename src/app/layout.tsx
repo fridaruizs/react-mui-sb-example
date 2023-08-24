@@ -6,7 +6,7 @@ import ThemeRegistry from '@/styles/ThemeRegistry';
 import Header from '@/components/molecules/Header';
 
 export const metadata = {
-  title: 'Simpe cat app',
+  title: 'Simple cat app',
   description: 'Example made by Frida Ruiz',
 };
 
