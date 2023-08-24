@@ -1,16 +1,20 @@
 'use client'
 import * as React from 'react';
+
+import Box from '@mui/material/Box'
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+import { Alert, Collapse } from '@mui/material';
 
 export default function TicTacToe(){
   const [board, setBoard] = React.useState<string[]>(Array(9).fill(''));
   const [xIsNext, setXIsNext] = React.useState<boolean>(true);
+  const [showAlert, setShowAlert] = React.useState<boolean>(false);
   const winner = calculateWinner(board);
 
   const handleClick = (index: number) => {
-    if (board[index] || winner) {
+    if (board[index] || winner || showAlert) {
       return;
     }
 
@@ -18,6 +22,18 @@ export default function TicTacToe(){
     newBoard[index] = xIsNext ? 'X' : 'O';
     setBoard(newBoard);
     setXIsNext(!xIsNext);
+  
+    const newWinner = calculateWinner(newBoard);
+  
+    if (newWinner || newBoard.every((square) => square)) {
+      setShowAlert(true);
+    }
+  };
+
+  const handleRestart = () => {
+    setBoard(Array(9).fill(''));
+    setXIsNext(true);
+    setShowAlert(false);
   };
 
   const renderSquare = (index: number) => (
@@ -31,6 +47,27 @@ export default function TicTacToe(){
     </Button>
   );
 
+  const styles = {
+    container: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      textAlign: 'center',
+    },
+    subtitle: {
+      paddingBottom: 3
+    },
+    alert: {
+      marginTop: 10,
+    },
+    button: {
+      marginTop: 4,
+      color: 'primary.dark',
+      backgroundColor: 'primary.light',
+    }
+  }
+
   const getStatus = () => {
     if (winner) {
       return `Winner: ${winner}`;
@@ -42,23 +79,29 @@ export default function TicTacToe(){
   };
 
   return (
-    <div>
+    <Box sx={styles.container}>
       <Typography variant="h4" gutterBottom>
-        Tic-Tac-Toe
+        Little two-player tictactoe
       </Typography>
-      <div>
-        <div className="status">{getStatus()}</div>
-        <div className="board">
-          <Grid container spacing={1}>
+      <Box>
+        <Box className="status" sx={styles.subtitle}>{getStatus()}</Box>
+        <Collapse in={showAlert}>
+          <Alert severity="success" sx={styles.alert}>
+            {winner ? `${winner} wins!` : "It's a draw!"}
+          </Alert>
+        </Collapse>
+        <Box className="board">
+          <Grid container spacing={1} rowSpacing={0}>
             {[0, 1, 2, 3, 4, 5, 6, 7, 8].map((index) => (
               <Grid item xs={4} key={index}>
                 {renderSquare(index)}
               </Grid>
             ))}
           </Grid>
-        </div>
-      </div>
-    </div>
+        </Box>
+        <Button variant="contained" onClick={handleRestart} sx={styles.button}>Restart</Button>
+      </Box>
+    </Box>
   );
 };
 
@@ -84,4 +127,3 @@ const calculateWinner = (squares: string[]): string | null => {
 
   return null;
 };
-
