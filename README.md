@@ -1,17 +1,7 @@
-# Material UI - Next.js App Router example in TypeScript
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped using [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with Material UI installed.
-
+# Material UI - Next.js App MUI and Storybook example in TypeScript
 ## How to use
 
-Download the example [or clone the repo](https://github.com/mui/material-ui):
-
-<!-- #default-branch-switch -->
-
-```bash
-curl https://codeload.github.com/mui/material-ui/tar.gz/master | tar -xz --strip=2  material-ui-master/examples/material-ui-nextjs-ts
-cd material-ui-nextjs-ts
-```
+Download the example [or clone the repo](https://github.com/fridaruizs/react-mui-sb-example):
 
 Install dependencies and run:
 
@@ -20,15 +10,15 @@ npm install
 npm run dev
 ```
 
+You'll need an .env API_KEY to see the magic happen (here's a freebie): ```live_kG6bTrBqav1Js7mTyR9M7GjlRN7MkUTRaBzUU8GyZr94SmB3LpObzHaPIYl1nRLo```
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `src/app/page.tsx`. The page auto-updates as you edit the file.
+To check out the component stories run:
 
-This example uses [`next/font/google`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts#google-fonts) to automatically optimize and load Roboto, a custom Google Font.
+```bash
+npm run sotrybook
+```
 
-## Learn more
+## Thanks for watching !
 
-To learn more about this example:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Customizing Material UI](https://mui.com/material-ui/customization/how-to-customize/) - approaches to customizing Material UI.
