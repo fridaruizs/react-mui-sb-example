@@ -5,6 +5,8 @@ import Grid from '@mui/material/Unstable_Grid2';
 import MediaCard from '@/components/molecules/MediaCard';
 import { Alert, AlertTitle, Collapse } from '@mui/material';
 
+import { useThemeContext } from '@/contexts/ThemeContext';
+
 export default function HomePage() {
   const styles = {
     container: {
@@ -17,7 +19,9 @@ export default function HomePage() {
 
   const [isAlertOpen, setIsAlertOpen] = React.useState(false);
 
-  const onThemeChange = () => {};
+  const { toggleColorMode } = useThemeContext();
+
+  const onThemeChange = () => toggleColorMode();
   const onStoryClick = () => setIsAlertOpen((pre) => !pre);
 
   return (
@@ -37,7 +41,7 @@ export default function HomePage() {
               text="Colors are a big part of the design process in my opinion, I like taking my time figuring out what's the best look for a product and what message am I trying to send to an audience."
               main={{
                 text: 'Click here to change the theme',
-                onclick: onThemeChange(),
+                onclick: () => onThemeChange(),
               }}
             />
           </Grid>
@@ -52,7 +56,7 @@ export default function HomePage() {
             <MediaCard
               heading="Want to play a game?"
               text="I like exploring my limits with code, finding and creating cool stuff (even if I never get to publish them) and I'm always down for a challenge: So here's a little react tic tac toe for you (PS: It's a two player game, this project is too small for an ai algorithm, or is it?)."
-              main={{ text: 'I want to play!', href: '/tictactoe' }}
+              main={{ text: 'I want to play!', href: '/game' }}
             />
           </Grid>
           <Grid sm={12} md={6}>
